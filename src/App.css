@@ -1,38 +1,147 @@
-.App {
+body {
+  background-color: hsl(210, 36%, 96%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title {
   text-align: center;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+  line-height: 1.25;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: hsl(205, 95%, 64%);
 }
 
-.App-header {
-  background-color: #282c34;
+main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: grid;
+  place-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 80vw;
+  max-width: 620px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.review {
+  background-color: #fff;
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+.author {
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+}
+
+.job {
+  color: hsl(205, 78%, 60%);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-size: 0.85rem;
+}
+
+.info {
+  margin-bottom: 0.75rem;
+}
+
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.person-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  background-color: hsl(205, 78%, 60%);
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transform: translateY(25%);
+  display: grid;
+  place-items: center;
+  top: 0;
+  left: 0;
+}
+
+.prev-btn,
+.next-btn {
+  color: hsl(205, 90%, 76%);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: hsl(205, 78%, 60%);
+}
+
+.random-btn {
+  margin-top: 0.5rem;
+  background: hsl(205, 100%, 96%);
+  color: hsl(205, 78%, 60%);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  transition: all 0.3s linear;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.random-btn:hover {
+  background: hsl(205, 78%, 60%);
+  color: hsl(205, 86%, 17%);
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 2.0rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .underline {
+    width: 4rem;
+  }
+
+  .img-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .quote-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .info {
+    font-size: 0.9rem;
   }
 }
+
